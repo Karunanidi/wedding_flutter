@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invitation/core/constant.dart';
 import 'package:invitation/model/image.dart';
 import 'package:invitation/widgets/image_card.dart';
 import 'package:invitation/widgets/page_transformer.dart';
@@ -10,7 +11,7 @@ class Gallery extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
       child: Image.asset(
-        'assets/images/flower.png',
+        img_flower,
         fit: BoxFit.contain,
       ),
     );
@@ -19,9 +20,9 @@ class Gallery extends StatelessWidget {
   Widget _buildTitleText() {
     return Container(
       child: const Text(
-        'Photo Gallery',
+        'Galeri',
         style: TextStyle(
-          color: Color.fromRGBO(41, 82, 56, 100),
+          color: Color(0x9C295238),
           fontWeight: FontWeight.bold,
           fontSize: 20,
         ),

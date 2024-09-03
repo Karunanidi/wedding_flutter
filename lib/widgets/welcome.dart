@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:invitation/core/constant.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -14,9 +15,9 @@ class Welcome extends StatelessWidget {
           decoration:
               BoxDecoration(color: const Color(0xFFFFFFFF).withOpacity(0.75)),
           child: const AutoSizeText(
-            'First start together\nKim Do-jin\n&\nKim Chae-eun',
+            'Karena Dengan Teman,\nKenangan Jadi\nLegenda',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20.0),
+            style: TextStyle(fontSize: 20.0,),
           ),
         ),
       ),
@@ -24,17 +25,17 @@ class Welcome extends StatelessWidget {
   }
 
   Widget _buildSubtitleText(BuildContext context) {
-    final dday = DateTime(2021, 6, 19);
+    final dday = DateTime(2024, 9, 22);
     final today = DateTime.now();
     final difference = dday.difference(today).inDays;
 
-    var ddayText = difference > 0 ? 'D-$difference days until that day' : '';
+    var ddayText = difference > 0 ? 'H -$difference days until that day' : '';
 
     return Column(
       children: [
         const Text(
-          'Saturday, June 19, 2021, 12:30 PM',
-          style: TextStyle(fontSize: 18),
+          EVENT_DATE,
+          style: TextStyle(fontSize: 15),
         ),
         const SizedBox(height: 10),
         AutoSizeText(
@@ -67,7 +68,7 @@ class Welcome extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height * 0.75,
                     child: Image.asset(
-                      'assets/images/2.jpeg',
+                      img_welcome,
                       fit: BoxFit.fitWidth,
                       width: double.infinity,
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invitation/core/constant.dart';
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class CustomDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(30.0),
-      child: Image.asset('assets/images/divider.png'),
+      child: Image.asset(img_divider),
     );
   }
 }
