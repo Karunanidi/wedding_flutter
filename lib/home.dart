@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> loadSongs() async {
     try {
-      await player.setAsset('assets/audio/wedding_music.mp3');
+      await player.setAsset('assets/audio/music.mp3');
       player.setLoopMode(LoopMode.one);
       if (Platform.isAndroid) {
         await player.play();

@@ -29,7 +29,10 @@ class CongratulationGift extends StatelessWidget {
               onPressed: () => onPressed(context, accountNumber),
               child: Text(
                 accountNumber,
-                style: const TextStyle(fontSize: 15),
+                style: const TextStyle(
+                  fontSize: 15,
+                  color: Color(0x9C295238),
+                ),
                 maxLines: 2,
               ),
             ),
@@ -46,16 +49,17 @@ class CongratulationGift extends StatelessWidget {
       child: Column(
         children: [
           const AutoSizeText(
-            'Ingin berpartisipasi mendonasikan untuk acara ini?',
+            'Contact Person',
             style: TextStyle(
-              color: Color.fromRGBO(41, 82, 56, 100),
+              color: Color(0x9C295238),
               fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
           ),
           const SizedBox(height: 50),
-          _buildButton(
-              context, 'TBD', 'TBD'),
+          _buildButton(context, 'Dian', '+62817-148-222'),
+          _buildButton(context, 'Fera', '+62877-7610-2088'),
+          _buildButton(context, 'Nivo', '+62858-8172-8448 '),
         ],
       ),
     );
